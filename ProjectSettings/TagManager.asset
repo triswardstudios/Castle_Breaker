@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player Troop
+  - Enemy Troop
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 744726329
+    locked: 0
+  - name: Troops
+    uniqueID: 689719427
     locked: 0
   m_RenderingLayers:
   - Default
