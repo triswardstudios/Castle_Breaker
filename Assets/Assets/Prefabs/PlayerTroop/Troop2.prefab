@@ -97,55 +97,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1136585034694808942, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3776504980922665064}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8643045614994178666, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3209828128133497383}
-    - targetCorrespondingSourceObject: {fileID: 8643045614994178666, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1281109359898848958}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
---- !u!1 &434652012776142958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8643045614994178666, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
-  m_PrefabInstance: {fileID: 8213006072967330308}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3209828128133497383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434652012776142958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a5e17284db1440af6aa46cedc6b3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDetector
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  detectionRange: 1.4
-  targetEnemy: {fileID: 0}
---- !u!114 &1281109359898848958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434652012776142958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e1eb903dbe26141b65985e36b50fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TroopAttack
-  attackCooldown: 1
-  fireTowardsEnemy: 1
-  bulletDirectionX: 1
-  bulletPool: {fileID: 0}
-  firePoint: {fileID: 3776504980922665064}
-  bulletSpeedOverride: -1
-  bulletDamageOverride: -1
 --- !u!4 &9097134441831444330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1136585034694808942, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}

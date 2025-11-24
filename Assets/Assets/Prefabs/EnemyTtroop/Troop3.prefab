@@ -44,9 +44,6 @@ GameObject:
   - component: {fileID: 9125455113049161656}
   - component: {fileID: 8044940652369109522}
   - component: {fileID: 7341760873763357469}
-  - component: {fileID: 4394409481363612706}
-  - component: {fileID: 7546689219634155372}
-  - component: {fileID: 4990147400247251822}
   m_Layer: 7
   m_Name: Troop3
   m_TagString: Untagged
@@ -206,52 +203,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
   movespeed: 0.4
   moveRight: 0
---- !u!114 &4394409481363612706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128893951283076061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a5e17284db1440af6aa46cedc6b3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDetector
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  detectionRange: 0.8
-  targetEnemy: {fileID: 0}
---- !u!114 &7546689219634155372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128893951283076061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e1eb903dbe26141b65985e36b50fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TroopAttack
-  attackCooldown: 1
-  fireTowardsEnemy: 1
-  bulletDirectionX: 1
-  troopBulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
-  firePoint: {fileID: 6264666895844073412}
-  bulletSpeedOverride: -1
-  bulletDamageOverride: -1
---- !u!114 &4990147400247251822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128893951283076061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc1924418b3d1a41835a96b574d56a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  health: 45

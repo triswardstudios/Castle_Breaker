@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 1948258907757127813}
   - component: {fileID: 4067878606471438390}
   - component: {fileID: 4790741493758929107}
-  - component: {fileID: 1832841704426040393}
-  - component: {fileID: 949848275875074531}
   m_Layer: 7
   m_Name: Troop1
   m_TagString: Untagged
@@ -174,42 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
   movespeed: 0.4
   moveRight: 0
---- !u!114 &1832841704426040393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238060949188376711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251a5e17284db1440af6aa46cedc6b3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDetector
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  detectionRange: 0.5
-  targetEnemy: {fileID: 0}
---- !u!114 &949848275875074531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238060949188376711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e1eb903dbe26141b65985e36b50fdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TroopAttack
-  attackCooldown: 1
-  fireTowardsEnemy: 1
-  bulletDirectionX: 1
-  bulletPool: {fileID: 0}
-  firePoint: {fileID: 15824148171369495}
-  bulletSpeedOverride: -1
-  bulletDamageOverride: -1
 --- !u!1 &1691393530915723382
 GameObject:
   m_ObjectHideFlags: 0
