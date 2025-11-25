@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4661936781431873641}
   - component: {fileID: 7122735764274020035}
   - component: {fileID: 5104133845878470251}
-  - component: {fileID: 829333745257215728}
+  - component: {fileID: 195356815061365157}
   m_Layer: 0
   m_Name: Bullet1
   m_TagString: Untagged
@@ -166,7 +166,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &829333745257215728
+--- !u!114 &195356815061365157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,11 +175,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2493863567100979459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aadb00077c6de84f9c181326b87271c, type: 3}
+  m_Script: {fileID: 11500000, guid: f55a2c62368e83b4bafbea5924ddd313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  speed: 8
-  damage: 10
+  speed: 10
+  power: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
   lifeTime: 3
-  useGravity: 0
-  pool: {fileID: 0}

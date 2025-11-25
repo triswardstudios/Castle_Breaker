@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2973099131162737535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.528, y: 0.307, z: 0}
+  m_LocalPosition: {x: 0.818, y: 0.307, z: 0}
   m_LocalScale: {x: 5.9065, y: 4.8113933, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,6 +91,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      propertyPath: m_Size.x
+      value: 1.168056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7504101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0058018635
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023285747598477279, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9023285747598477279, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_Constraints
       value: 6
@@ -101,10 +117,66 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4802621585404800802, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7755642185991006388}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5044286335336324974, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7686697739207283465}
+    - targetCorrespondingSourceObject: {fileID: 5044286335336324974, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8343480747331866073}
   m_SourcePrefab: {fileID: 100100000, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+--- !u!114 &2866032853529108149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 518202715020349242, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+  m_PrefabInstance: {fileID: 2375427997749334415}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419628294855315169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9543b899bf206eb42be094b97c3b94ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
 --- !u!4 &7084551232126254765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4802621585404800802, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
   m_PrefabInstance: {fileID: 2375427997749334415}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7419628294855315169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5044286335336324974, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+  m_PrefabInstance: {fileID: 2375427997749334415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7686697739207283465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419628294855315169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81803a410d878ac4f95e3b7da290aa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attack
+  detectionRange: 3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
+  firePoint: {fileID: 7755642185991006388}
+  fireRate: 0.5
+  fireRight: 1
+  movementScript: {fileID: 2866032853529108149}
+--- !u!114 &8343480747331866073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419628294855315169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5558715a6154f79418120b5190e05028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
+  maxHealth: 20
