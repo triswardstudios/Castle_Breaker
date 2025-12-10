@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using System.Linq;
 
@@ -43,9 +43,16 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         if (spawner == null)
+            spawner = GetComponent<EnemyTroopSpawner>();
+
+        // 🔹 Read difficulty from PlayerPrefs (set by Play.cs)
+        if (PlayerPrefs.HasKey("Difficulty"))
         {
-            Debug.LogError("EnemyAI: No EnemyTroopSpawner assigned.");
-            return;
+            int diffIndex = PlayerPrefs.GetInt("Difficulty");
+            if (diffIndex >= 0 && diffIndex <= 2)
+            {
+                difficulty = (Difficulty)diffIndex;
+            }
         }
 
         aiRoutine = StartCoroutine(AILoop());
