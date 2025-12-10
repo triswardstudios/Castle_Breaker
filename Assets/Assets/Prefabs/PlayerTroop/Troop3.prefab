@@ -101,10 +101,66 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7706866869636796548, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1947274664971240888}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5095043081817228490, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1940191247967292520}
+    - targetCorrespondingSourceObject: {fileID: 5095043081817228490, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4481283710605810819}
   m_SourcePrefab: {fileID: 100100000, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
+--- !u!114 &5955912830934827672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7240499513278946314, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
+  m_PrefabInstance: {fileID: 3953259817995247250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100276347905612376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9543b899bf206eb42be094b97c3b94ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
 --- !u!4 &6640705321121811990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7706866869636796548, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
   m_PrefabInstance: {fileID: 3953259817995247250}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8100276347905612376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5095043081817228490, guid: 0627338dfb0e55545bfc91fc6ac0717c, type: 3}
+  m_PrefabInstance: {fileID: 3953259817995247250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1940191247967292520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100276347905612376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81803a410d878ac4f95e3b7da290aa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attack
+  detectionRange: 2
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  bulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
+  firePoint: {fileID: 1947274664971240888}
+  fireRate: 0.5
+  fireRight: 1
+  movementScript: {fileID: 5955912830934827672}
+--- !u!114 &4481283710605810819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100276347905612376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5558715a6154f79418120b5190e05028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
+  maxHealth: 45

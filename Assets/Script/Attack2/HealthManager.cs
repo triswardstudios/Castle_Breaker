@@ -20,16 +20,23 @@ public class HealthManager : MonoBehaviour
     {
         if (gameEnded) return;
         gameEnded = true;
-        Debug.Log("Game Over! Player Tower Destroyed.");
-        // Here you can add UI, scene reload, etc.
+
+        if (GameStatus.Instance != null)
+            GameStatus.Instance.ShowGameOver();
+        else
+            Debug.Log("Game Over! (No GameStatus found)");
     }
 
     public void OnEnemyTowerZero()
     {
         if (gameEnded) return;
         gameEnded = true;
-        Debug.Log("Player Wins! Enemy Tower Destroyed.");
-        // Here you can add win UI, next level, etc.
+
+        if (GameStatus.Instance != null)
+            GameStatus.Instance.ShowWinner();
+        else
+            Debug.Log("Player Wins! (No GameStatus found)");
     }
 }
+
 

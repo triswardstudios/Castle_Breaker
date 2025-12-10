@@ -42,17 +42,17 @@ public class TroopSpawn : MonoBehaviour
         if (button3 != null) button3.interactable = points >= cost3;
     }
 
-    void SpawnTroop1()
+    public void SpawnTroop1()
     {
         TrySpawn(troop1Prefab, cost1);
     }
 
-    void SpawnTroop2()
+    public void SpawnTroop2()
     {
         TrySpawn(troop2Prefab, cost2);
     }
 
-    void SpawnTroop3()
+    public void SpawnTroop3()
     {
         TrySpawn(troop3Prefab, cost3);
     }

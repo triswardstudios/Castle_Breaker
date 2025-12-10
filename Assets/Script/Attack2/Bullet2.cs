@@ -38,31 +38,33 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if this collider is on the enemy layer
-        if ((enemyLayer.value & (1 << other.gameObject.layer)) == 0)
-            return; // not in enemy layer, ignore
-
-        // Try troop first
-        TroopHealth troopHealth = other.GetComponent<TroopHealth>();
-        if (troopHealth != null)
+        // check enemy layer hit
+        if ((enemyLayer.value & (1 << other.gameObject.layer)) != 0)
         {
-            troopHealth.TakeDamage(power);
-            gameObject.SetActive(false);
-            return;
-        }
+            // Award points
+            if (PointBar.Instance != null)
+            {
+                PointBar.Instance.AddPoints(PointBar.Instance.rewardPerKill);
+            }
 
-        // Try tower
-        TowerHealth towerHealth = other.GetComponent<TowerHealth>();
-        if (towerHealth != null)
-        {
-            towerHealth.TakeDamage(power);
-            gameObject.SetActive(false);
-            return;
-        }
+            // damage the troop / tower if needed
+            TroopHealth troopHealth = other.GetComponent<TroopHealth>();
+            if (troopHealth != null)
+            {
+                troopHealth.TakeDamage(power);
+            }
 
-        // If it's an enemy layer but no health script, still disable bullet
-        gameObject.SetActive(false);
+            TowerHealth towerHealth = other.GetComponent<TowerHealth>();
+            if (towerHealth != null)
+            {
+                towerHealth.TakeDamage(power);
+            }
+
+            // disable bullet after hit
+            gameObject.SetActive(false);
+        }
     }
+    
 }
 
 
