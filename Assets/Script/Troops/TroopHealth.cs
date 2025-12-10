@@ -1,18 +1,39 @@
 using UnityEngine;
+using static TroopCounter;
 
 public class TroopHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
+
+    [Header("Which side this troop belongs to")]
+    public TroopSide side = TroopSide.Player;
+
     private float currentHealth;
 
-    void Awake()
+    void OnEnable()
     {
         currentHealth = maxHealth;
+
+        // Count this troop as active
+        if (TroopCounter.Instance != null)
+        {
+            TroopCounter.Instance.RegisterTroop(side);
+        }
+    }
+
+    void OnDisable()
+    {
+        // When a troop is disabled (dead / removed), reduce count
+        if (TroopCounter.Instance != null)
+        {
+            TroopCounter.Instance.UnregisterTroop(side);
+        }
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+
         if (currentHealth <= 0f)
         {
             currentHealth = 0f;
@@ -22,8 +43,9 @@ public class TroopHealth : MonoBehaviour
 
     void Die()
     {
-        // Disable troop game object when health reaches 0
+        // Just disable the troop, OnDisable will update the counter
         gameObject.SetActive(false);
     }
 }
+
 

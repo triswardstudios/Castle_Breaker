@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 9125455113049161656}
   - component: {fileID: 8044940652369109522}
   - component: {fileID: 7341760873763357469}
-  - component: {fileID: 5185598971869784578}
   - component: {fileID: 7555801490120570150}
+  - component: {fileID: 5185598971869784578}
   m_Layer: 7
   m_Name: Troop3
   m_TagString: Untagged
@@ -186,7 +186,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -205,19 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
   movespeed: 0.4
   moveRight: 0
---- !u!114 &5185598971869784578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5128893951283076061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5558715a6154f79418120b5190e05028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
-  maxHealth: 45
 --- !u!114 &7555801490120570150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,5 +224,19 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2493863567100979459, guid: 986b142377c50844fa56867a33212ce0, type: 3}
   firePoint: {fileID: 6264666895844073412}
   fireRate: 0.5
-  fireRight: 1
+  fireRight: 0
   movementScript: {fileID: 7341760873763357469}
+--- !u!114 &5185598971869784578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5128893951283076061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5558715a6154f79418120b5190e05028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
+  maxHealth: 45
+  side: 1

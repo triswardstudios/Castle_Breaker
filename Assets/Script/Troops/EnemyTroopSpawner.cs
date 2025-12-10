@@ -1,37 +1,49 @@
 using UnityEngine;
+using static TroopCounter;
 
 public class EnemyTroopSpawner : MonoBehaviour
 {
-    [Header("Spawn Settings")]
-    public Transform spawnPoint;      // where enemy troops appear
-
-    [Header("Troop Prefabs")]
-    public GameObject troop1Prefab;   // short range / cheap
-    public GameObject troop2Prefab;   // mid
-    public GameObject troop3Prefab;   // long range / strong
+    public Transform spawnPoint;
+    public GameObject troop1Prefab;
+    public GameObject troop2Prefab;
+    public GameObject troop3Prefab;
 
     public void SpawnTroop1()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Enemy))
+        {
+            Debug.Log("Enemy cannot spawn more troops (limit reached).");
+            return;
+        }
+
         Spawn(troop1Prefab);
     }
 
     public void SpawnTroop2()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Enemy))
+        {
+            Debug.Log("Enemy cannot spawn more troops (limit reached).");
+            return;
+        }
+
         Spawn(troop2Prefab);
     }
 
     public void SpawnTroop3()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Enemy))
+        {
+            Debug.Log("Enemy cannot spawn more troops (limit reached).");
+            return;
+        }
+
         Spawn(troop3Prefab);
     }
 
-    private void Spawn(GameObject prefab)
+    void Spawn(GameObject prefab)
     {
-        if (prefab == null)
-        {
-            Debug.LogWarning("EnemyTroopSpawner: prefab is not assigned.");
-            return;
-        }
+        if (prefab == null) return;
 
         Vector3 pos = spawnPoint != null ? spawnPoint.position : transform.position;
         Quaternion rot = spawnPoint != null ? spawnPoint.rotation : Quaternion.identity;
@@ -39,4 +51,5 @@ public class EnemyTroopSpawner : MonoBehaviour
         Instantiate(prefab, pos, rot);
     }
 }
+
 

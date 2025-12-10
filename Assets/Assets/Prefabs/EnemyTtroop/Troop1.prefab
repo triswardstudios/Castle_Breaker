@@ -148,18 +148,18 @@ Rigidbody2D:
   m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &4790741493758929107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2493863567100979459, guid: 986b142377c50844fa56867a33212ce0, type: 3}
   firePoint: {fileID: 15824148171369495}
   fireRate: 0.5
-  fireRight: 1
+  fireRight: 0
   movementScript: {fileID: 4790741493758929107}
 --- !u!114 &-7473182850199895001
 MonoBehaviour:
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
   maxHealth: 20
+  side: 1
 --- !u!1 &1691393530915723382
 GameObject:
   m_ObjectHideFlags: 0

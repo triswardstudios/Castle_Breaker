@@ -7,6 +7,8 @@ public class TowerHealth : MonoBehaviour
 
     private float currentHealth;
 
+    public float CurrentHealth => currentHealth;
+
     void Awake()
     {
         currentHealth = maxHealth;
@@ -38,9 +40,6 @@ public class TowerHealth : MonoBehaviour
         {
             HealthManager.Instance.OnEnemyTowerZero();
         }
-
-        // DO NOT disable the tower object (as you requested)
-        // You can play a broken animation or change sprite here instead.
     }
 }
 

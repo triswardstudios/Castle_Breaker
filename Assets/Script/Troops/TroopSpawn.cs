@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static TroopCounter;
 
 public class TroopSpawn : MonoBehaviour
 {
@@ -44,29 +45,63 @@ public class TroopSpawn : MonoBehaviour
 
     public void SpawnTroop1()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Player))
+        {
+            Debug.Log("Player cannot spawn more troops (limit reached).");
+            return;
+        }
         TrySpawn(troop1Prefab, cost1);
     }
 
     public void SpawnTroop2()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Player))
+        {
+            Debug.Log("Player cannot spawn more troops (limit reached).");
+            return;
+        }
         TrySpawn(troop2Prefab, cost2);
     }
 
     public void SpawnTroop3()
     {
+        if (TroopCounter.Instance != null && !TroopCounter.Instance.CanSpawn(TroopSide.Player))
+        {
+            Debug.Log("Player cannot spawn more troops (limit reached).");
+            return;
+        }
         TrySpawn(troop3Prefab, cost3);
     }
 
     void TrySpawn(GameObject prefab, int cost)
     {
+       //Troop1
         if (prefab == null || spawnPoint == null || pointBar == null)
             return;
 
-        // Spend points only if enough
-        if (pointBar.SpendPoints(cost))
-        {
-            Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
-        }
+        if (!pointBar.SpendPoints(cost))
+            return;
+       
+        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
+
+        ////Troop2
+        //if (troop2Prefab == null || spawnPoint == null || pointBar == null)
+        //    return;
+
+        //if (!pointBar.SpendPoints(cost2))
+        //    return;
+
+        //Instantiate(troop2Prefab, spawnPoint.position, spawnPoint.rotation);
+       
+        ////Troop3
+        //if (troop3Prefab == null || spawnPoint == null || pointBar == null)
+        //    return;
+
+        //if (!pointBar.SpendPoints(cost3))
+        //    return;
+
+        //Instantiate(troop3Prefab, spawnPoint.position, spawnPoint.rotation);
     }
+    
 }
 
