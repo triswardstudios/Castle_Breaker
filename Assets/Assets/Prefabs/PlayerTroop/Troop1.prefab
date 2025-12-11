@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 518202715020349242, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: movespeed
-      value: 0.4
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4802621585404800802, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -184,3 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TroopHealth
   maxHealth: 20
+  side: 0

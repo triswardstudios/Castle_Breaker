@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 5707416568639911377, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
+      propertyPath: movespeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8643045614994178666, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
       propertyPath: m_Name
       value: Troop2

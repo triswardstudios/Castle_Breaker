@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9543b899bf206eb42be094b97c3b94ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TroopMovement
-  movespeed: 0.4
+  movespeed: 0.8
   moveRight: 0
 --- !u!114 &6928012956684249535
 MonoBehaviour:
