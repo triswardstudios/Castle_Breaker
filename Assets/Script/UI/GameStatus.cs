@@ -16,6 +16,9 @@ public class GameStatus : MonoBehaviour
     public int mainMenuSceneIndex = 0;   // 0 = Main Menu Scene
     public int gameSceneIndex = 1;       // Game Scene (if you want "Play Again")
 
+    [Header("UI")]
+    public GameObject difficultyPanel;
+
     void Awake()
     {
         if (Instance == null)
@@ -46,15 +49,7 @@ public class GameStatus : MonoBehaviour
     void SetupButtons()
     {
         // Assign button listeners
-        playButton.onClick.RemoveAllListeners();
         quitButton.onClick.RemoveAllListeners();
-
-        // Play Again loads main menu (OR game scene — your choice)
-        playButton.onClick.AddListener(() =>
-        {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(mainMenuSceneIndex); // or gameSceneIndex
-        });
 
         // Quit also loads main menu
         quitButton.onClick.AddListener(() =>
@@ -63,6 +58,45 @@ public class GameStatus : MonoBehaviour
             SceneManager.LoadScene(mainMenuSceneIndex);
         });
     }
+
+    public void PlayGame()
+    {
+        if (difficultyPanel != null)
+        {
+            difficultyPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Play: Difficulty panel is not assigned!");
+        }
+    }
+
+    // Called by Easy / Medium / Hard buttons
+    public void PlayEasy()
+    {
+        SetDifficultyAndStart(0); // 0 = Easy
+    }
+
+    public void PlayMedium()
+    {
+        SetDifficultyAndStart(1); // 1 = Medium
+    }
+
+    public void PlayHard()
+    {
+        SetDifficultyAndStart(2); // 2 = Hard
+    }
+
+    void SetDifficultyAndStart(int difficultyIndex)
+    {
+        // Save difficulty for next scene
+        PlayerPrefs.SetInt("Difficulty", difficultyIndex);
+        PlayerPrefs.Save();
+
+        // Load your game scene (index 1 like before)
+        SceneManager.LoadSceneAsync(1);
+    }
+
 }
 
 

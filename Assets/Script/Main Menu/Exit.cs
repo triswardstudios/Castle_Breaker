@@ -2,12 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour
 {
-    public void PLayGAme()
+    public void QuitGame()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+        // If running in the Unity editor
+        Application.Quit();
     }
 }
