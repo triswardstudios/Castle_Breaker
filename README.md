@@ -1,9 +1,9 @@
-# Endless Runner Game (Unity)
+# Castle Breaker (Unity)
 
 ## 🎮 About the Project
-An endless runner game inspired by Temple Run.
-Developed using Unity and C# with focus on gameplay mechanics,
-path generation, obstacle spawning, and coin collection.
+Castle Breaker is a Unity-based game where the player destroys castles
+using interactive gameplay mechanics. The project focuses on physics,
+player interaction, and game flow.
 
 ## 🛠 Tech Stack
 - Unity Engine
@@ -11,11 +11,11 @@ path generation, obstacle spawning, and coin collection.
 - Object-Oriented Programming (OOP)
 
 ## ✨ Features
-- Infinite path generation
-- Dynamic obstacle spawning
-- Coin collection system
-- Increasing difficulty over time
-- Keyboard input controls
+- Player movement and attack mechanics
+- Castle destruction logic
+- Enemy interaction
+- Score and game state handling
 
-## ▶ How to Run the Project
+## ▶ How to Run
 1. Clone the repository
+
