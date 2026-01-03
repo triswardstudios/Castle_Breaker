@@ -18,4 +18,5 @@ Features
 
 How to Run
 1. Clone the repository
+2. Download Build: https://drive.google.com/drive/folders/12vxGqTCbdTbuoDzZ-luoXm_tGfhzrH4z?usp=sharing
 
