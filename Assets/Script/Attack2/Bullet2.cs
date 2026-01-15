@@ -45,6 +45,7 @@ public class Bullet : MonoBehaviour
             if (PointBar.Instance != null)
             {
                 PointBar.Instance.AddPoints(PointBar.Instance.rewardPerKill);
+                PointBar.Instance.AddPoints(PointBar.Instance.onTowerDamaged);
             }
 
             // damage the troop / tower if needed

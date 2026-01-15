@@ -45,6 +45,7 @@ public class TroopHealth : MonoBehaviour
     {
         // Just disable the troop, OnDisable will update the counter
         gameObject.SetActive(false);
+        PointBar.Instance.AddPoints(PointBar.Instance.rewardPerUnitLost);
     }
 }
 

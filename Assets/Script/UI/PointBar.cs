@@ -21,7 +21,9 @@ public class PointBar : MonoBehaviour
     public bool wholeNumbers = true;
 
     public int CurrentPoints { get; private set; }
-    public int rewardPerKill = 5;
+    public int rewardPerKill = 2;
+    public int rewardPerUnitLost = 1;
+    public int onTowerDamaged = 5;
 
 
     // internal coroutine handle so multiple calls interrupt cleanly
