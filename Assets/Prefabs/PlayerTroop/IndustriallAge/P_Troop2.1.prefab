@@ -113,15 +113,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_Size.x
-      value: 1.168056
+      value: 1.058286
       objectReference: {fileID: 0}
     - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_Size.y
-      value: 1.7504101
+      value: 1.7504102
       objectReference: {fileID: 0}
     - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0058018635
+      value: 0.009466806
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792764940396351340, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.026118927
       objectReference: {fileID: 0}
     - target: {fileID: 9023285747598477279, guid: 7ade03d45a8ae42439cf9bf81be9e38b, type: 3}
       propertyPath: m_Mass
@@ -186,7 +190,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  bulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
+  bulletPrefab: {fileID: 2493863567100979459, guid: 8e0db93266ccf4846bf7ec87b94a61b1, type: 3}
   firePoint: {fileID: 7755642185991006388}
   fireRate: 1.1
   fireRight: 1

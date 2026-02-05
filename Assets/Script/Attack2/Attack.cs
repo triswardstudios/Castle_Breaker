@@ -86,6 +86,12 @@ public class Attack : MonoBehaviour
             Vector2 dir = fireRight ? Vector2.right : Vector2.left;
             bullet.SetDirection(dir);
         }
+        Arc_Bullet arcBullet = bulletObj.GetComponent<Arc_Bullet>();
+        if (arcBullet != null)
+        {
+            Vector2 dir = fireRight ? Vector2.right : Vector2.left;
+            arcBullet.SetDirection(dir);
+        }
     }
 
     void OnDrawGizmosSelected()

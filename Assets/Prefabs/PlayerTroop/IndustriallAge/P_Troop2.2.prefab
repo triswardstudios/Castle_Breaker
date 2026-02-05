@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3135704377916151977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.528, y: 0.307, z: 0}
+  m_LocalPosition: {x: 0.659, y: 0.307, z: 0}
   m_LocalScale: {x: 5.9065, y: 4.8113933, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,6 +86,22 @@ PrefabInstance:
     - target: {fileID: 1136585034694808942, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346281538704604659, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0545222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346281538704604659, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7916173
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346281538704604659, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.005524953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346281538704604659, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.026118927
       objectReference: {fileID: 0}
     - target: {fileID: 5116368109759921691, guid: 5189ab0391c187a44bfe4ada3d520ddc, type: 3}
       propertyPath: m_Mass
@@ -154,7 +170,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  bulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
+  bulletPrefab: {fileID: 2493863567100979459, guid: a820884164d4036408597882a8db49b8, type: 3}
   firePoint: {fileID: 3776504980922665064}
   fireRate: 1
   fireRight: 1

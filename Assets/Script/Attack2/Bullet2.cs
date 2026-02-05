@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class Bullet : MonoBehaviour
@@ -49,14 +49,12 @@ public class Bullet : MonoBehaviour
             }
 
             // damage the troop / tower if needed
-            TroopHealth troopHealth = other.GetComponent<TroopHealth>();
-            if (troopHealth != null)
+            if (other.TryGetComponent<TroopHealth>(out var troopHealth))
             {
                 troopHealth.TakeDamage(power);
             }
 
-            TowerHealth towerHealth = other.GetComponent<TowerHealth>();
-            if (towerHealth != null)
+            if (other.TryGetComponent<TowerHealth>(out var towerHealth))
             {
                 towerHealth.TakeDamage(power);
             }

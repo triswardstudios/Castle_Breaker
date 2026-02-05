@@ -130,8 +130,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.024939563, y: 0.0261189}
-  m_Size: {x: 2.09022, y: 1.7504103}
+  m_Offset: {x: -0.029290516, y: 0.026118927}
+  m_Size: {x: 1.002299, y: 1.7916173}
   m_Direction: 0
 --- !u!50 &4067878606471438390
 Rigidbody2D:
@@ -190,7 +190,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 2493863567100979459, guid: 986b142377c50844fa56867a33212ce0, type: 3}
+  bulletPrefab: {fileID: 2493863567100979459, guid: 8d1a3953f0afacc41979822931c39080, type: 3}
   firePoint: {fileID: 15824148171369495}
   fireRate: 1.4
   fireRight: 0
@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 1691393530915723382}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.543, y: 0.307, z: 0}
+  m_LocalPosition: {x: -0.743, y: 0.307, z: 0}
   m_LocalScale: {x: 5.9065, y: 4.8113933, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

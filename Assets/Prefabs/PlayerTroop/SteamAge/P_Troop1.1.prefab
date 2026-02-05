@@ -174,7 +174,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  bulletPrefab: {fileID: 2493863567100979459, guid: e22eb39798904bd4fae7c013e76e787a, type: 3}
+  bulletPrefab: {fileID: 2493863567100979459, guid: 5b161694e0e0e97448a558bb059b8a56, type: 3}
   firePoint: {fileID: 7755642185991006388}
   fireRate: 0.8
   fireRight: 1

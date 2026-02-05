@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4661936781431873641}
   - component: {fileID: 7122735764274020035}
   - component: {fileID: 5104133845878470251}
-  - component: {fileID: 195356815061365157}
+  - component: {fileID: 5468266974277034572}
   m_Layer: 0
   m_Name: Bullet1.4
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 2493863567100979459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.904, y: 0.327, z: 0}
-  m_LocalScale: {x: 0.033476252, y: 0.0468, z: 1}
+  m_LocalPosition: {x: -0.85632, y: 0.32792, z: 0}
+  m_LocalScale: {x: 0.051845457, y: 0.113680035, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2493863567100979459}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -166,7 +166,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!114 &195356815061365157
+--- !u!114 &5468266974277034572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,12 +175,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2493863567100979459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f55a2c62368e83b4bafbea5924ddd313, type: 3}
+  m_Script: {fileID: 11500000, guid: 76567d0b53a344446b8c477c8f6f880a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  speed: 10
+  m_EditorClassIdentifier: Assembly-CSharp::Arc_Bullet
+  speed: 5
+  arcHeight: 5
+  gravity: 9.8
+  explosionRadius: 3
   power: 60
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  lifeTime: 3
+  lifeTime: 5
