@@ -10,8 +10,8 @@ public class PointBar : MonoBehaviour
     public Slider pointSlider;      // assign your UI Slider here
 
     [Header("Points")]
-    public int maxPoints = 100;
-    public int startPoints = 50;
+    public int maxPoints = 300;
+    public int startPoints = 150;
 
     [Header("Animation")]
     [Tooltip("Duration (seconds) to animate the slider when value changes.")]

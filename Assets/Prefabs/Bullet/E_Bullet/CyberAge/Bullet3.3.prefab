@@ -186,4 +186,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 192
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   lifeTime: 5

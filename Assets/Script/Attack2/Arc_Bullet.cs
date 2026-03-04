@@ -12,6 +12,9 @@ public class Arc_Bullet : MonoBehaviour
     public float explosionRadius = 3f;
     public float power = 25f;       // damage per target
     public LayerMask enemyLayer;
+   
+    [Header("Ground Detection")]
+    public LayerMask groundLayer;
 
     [Header("Life")]
     public float lifeTime = 5f;
@@ -57,11 +60,20 @@ public class Arc_Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // explode on hitting ground, troop, or tower
-        if (!hasExploded)
+        if ((groundLayer.value & (1 << other.gameObject.layer)) != 0)
         {
-            Debug.Log("Arc_Bullet: Hit " + other.name);
             Explode();
+        }
+
+        // check enemy layer hit
+        if ((enemyLayer.value & (1 << other.gameObject.layer)) != 0)
+        {
+            // explode on hitting ground, troop, or tower
+            if (!hasExploded)
+            {
+                Debug.Log("Arc_Bullet: Hit " + other.name);
+                Explode();
+            }
         }
     }
 

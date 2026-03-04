@@ -22,7 +22,7 @@ public class TowerHealthBarUI : MonoBehaviour
         if (healthSlider != null)
         {
             healthSlider.minValue = 0f;
-            healthSlider.maxValue = tower.maxHealth;
+            healthSlider.maxValue = tower.baseMaxHealth;
             healthSlider.value = tower.CurrentHealth;
         }
 
