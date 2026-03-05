@@ -644,7 +644,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 243403833}
-  - component: {fileID: 243403834}
   - component: {fileID: 243403835}
   m_Layer: 0
   m_Name: EnemySpawner
@@ -668,22 +667,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &243403834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243403831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3b4dd1094affa343ac5dbd91df8c5a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTroopSpawner
-  spawnPoint: {fileID: 549222650}
-  troop1Prefab: {fileID: 238060949188376711, guid: b5a3be12963805144a45be911ab2e361, type: 3}
-  troop2Prefab: {fileID: 1616331369909683937, guid: bd5461d13ca9cfc48b7da8bc4c516c91, type: 3}
-  troop3Prefab: {fileID: 5128893951283076061, guid: d70bb2c7337e1864c822924b08da299a, type: 3}
 --- !u!114 &243403835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17111c51364409479eb252be6afe3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  spawner: {fileID: 243403834}
+  spawner: {fileID: 0}
   difficulty: 0
   baseDecisionInterval: 2
   randomJitter: 0.5
